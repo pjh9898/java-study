@@ -20,6 +20,18 @@ public class Product {
     @Min(0)
     private Integer amount;
 
+    public @Size(min = 1, max = 100) String getName() {
+        return name;
+    }
+
+    public @Max(1_000_000) @Min(0) Integer getPrice() {
+        return price;
+    }
+
+    public @Max(9_999) @Min(0) Integer getAmount() {
+        return amount;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
